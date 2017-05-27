@@ -1,0 +1,29 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">{{ site.title }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>par <a href="http://fmgagnon.com">François Gagnon</a></li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+                    <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+       <p>Dernière mise à jour&nbsp;: 25 novembre 2016</p>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description }}</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>

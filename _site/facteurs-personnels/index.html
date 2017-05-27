@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Influence des facteurs personnels</title>
+  <meta name="description" content="Un essai sur les facteurs qui influencent les prédictions que font les citoyens du résultat d'une élection, ce qui peut influencer leur vote tactique.
+">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/tableaux.css">
+  
+  <link rel="canonical" href="http://predictionscitoyennes.fmgagnon.com/facteurs-personnels/">
+  <link rel="alternate" type="application/rss+xml" title="Prédictions citoyennes" href="http://predictionscitoyennes.fmgagnon.com/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Prédictions citoyennes</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Influence des facteurs personnels</h1>
+  </header>
+
+  <div class="post-content">
+    <p>La première hypothèse testée suppose un lien entre l’identification partisane du répondant et sa prédiction sur l’issue du vote : Les électeurs surestiment les chances de victoire des candidats dont ils partagent l’identification partisane et la sophistication du répondant mitige cet effet.</p>
+
+<p>En premier lieu, il s’agit de prouver que l’identification partisane des répondants influence leur prédiction sur l’issue de la course. Les conclusions de la littérature nous porteraient à anticiper un effet d’optimisme de type « wishful thinking ». En effet, le graphique 9 montre que, pour les élections de 2004 et 2006, la prédiction des répondants varie selon leur identification partisane :</p>
+
+<figure>
+    <figcaption>Graphique 9 : Prédiction selon l’identification partisane, 2004 et 2006</figcaption>
+    <img src="../graphiques/h11e4-6.png" alt="" />
+</figure>
+
+<p>On peut donc observer que les prédictions de victoire sont plus optimistes pour les répondants qui s’identifient à un parti : par exemple, les électeurs néodémocrates sont enclins à envisager une victoire de leur parti, tout comme les électeurs conservateurs et libéraux ont une perception inversée de la position de leur partis respectifs. Pour 2008 et 2011, on observe aussi une plus grande propension à prédire une victoire en faveur de son parti favori :</p>
+
+<figure>
+    <figcaption>Graphique 10 : Prédiction selon l’identification partisane, 2008 et 2011</figcaption>
+    <img src="../graphiques/h11e8-11.png" alt="" />
+</figure>
+
+<p>Afin de tester formellement cette hypothèse, les réponses fournies à l’occasion de l’enquête ont été standardisées (afin de s’assurer que la somme des chances de réponses pour chaque répondant était de 100 %.) et intégrées à un modèle simple de régression selon lequel les chances de victoires <em>C</em> pour un parti <em>p</em> selon un répondant de l’ÉÉC sont influencées par son identification pour ce parti ou un autre :</p>
+
+<p align="center">
+C<sub>P</sub> = β<sub>0</sub> + β<sub>1</sub>IDP<sub>1</sub> + β<sub>2</sub>IDP<sub>2</sub> + β<sub>3IDP2</sub>
+</p>
+
+<p>Pour mieux isoler l’impact de la partisannerie, on traduit l’identification partisane en une variable dichotomique pour identifier les partisans du parti étudié et les autres (incluant les partisans d’un autre parti et ceux qui ne s’identifient à aucun parti), on peut observer l’impact de l’identification partisane sur la prédiction d’une façon plus nette :</p>
+
+<figure>
+<figcaption>
+Tableau 2 : Prédictions des chances de victoire de chaque parti</figcaption>
+
+<table>
+
+<tr>
+	<td></td>
+	<td colspan="3">
+2004</td>
+	<td colspan="3">
+2006</td>
+</tr>
+<tr>
+        <td></td>
+	<td>Chances nationales du PLC</td>
+	<td>Chances nationales du PCC</td>
+	<td>Chances nationales du NPD</td>
+	<td>Chances nationales du PLC</td>
+	<td>Chances nationales du PCC</td>
+	<td>Chances nationales du NPD</td>
+</tr>
+
+<tr>
+	<td>constante<br />β<sub>0</sub></td>
+	<td>57,77*<br />(1,06)</td>
+	<td>43,47*<br />(1,06)</td>
+	<td>10,14*<br />(0,71)</td>
+	<td>53,58*<br />(0,48)</td>
+	<td>48,48*<br />(0,45)</td>
+	<td>33,01*<br />(0,96)</td>
+</tr>
+
+<tr>
+	<td>Partisan libéral<br />β<sub>1</sub></td>
+	<td>12,02*<br />(1,64)</td>
+	<td>-12,09*<br />(1,65)</td>
+	<td>-4,63*<br />(1,13)</td>
+	<td>2,61<br />(0,69)</td>
+	<td>-3,18*<br />(0,66)</td>
+	<td>-0,37*<br />(1,54)</td>
+</tr>
+<tr>
+	<td>Partisan conservateur<br />β<sub>2</sub></td>
+	<td>-15,62*<br />(1,89)</td>
+	<td>16,55*<br />(1,86)</td>
+	<td>-7,89*<br />(1,31)</td>
+	<td>-5,5*<br />0,78</td>
+	<td>3,50*<br />(0,71)</td>
+	<td>-4,37*<br />(1,85)</td>
+</tr>
+<tr>
+	<td>Partisan néodémocrate<br />β<sub>3</sub></td>
+	<td>-1,18<br />(2,75)</td>
+	<td>-5,61*<br />(2,73)</td>
+	<td>8,64*<br />(1,77)</td>
+	<td>-2,77*<br />(1,01)</td>
+	<td>-2,62*<br />(0,97)</td>
+	<td>3,48<br />(1,81)</td>
+</tr>
+<tr>
+	<td>R<sup>2</sup></td>
+	<td>0,06</td>
+	<td>0,06</td>
+	<td>0,04</td>
+	<td>0,02</td>
+	<td>0,03</td>
+	<td>0,02</td>
+</tr>
+<tr>
+	<td>n</td>
+	<td>3148</td>
+	<td>3167</td>
+	<td>2220</td>
+	<td>3189</td>
+	<td>3075</td>
+	<td>667</td>
+</tr>
+<tr>
+    <td colspan="7">
+(erreur-type)<br />
+* p &lt; 0,05
+    </td>
+</tr>
+</table>
+
+</figure>
+
+<p>Comme le montre le tableau 1, les signes des résultats sont cohérents avec la théorie qui pose une corrélation entre l’identification partisane et la prédiction sur le résultat de l’élection. L’effet, même s’il est statistiquement significatif, reste modeste, ce qu’il faudra garder en tête lorsque le modèle sera précisé.</p>
+
+<p>Pour les années 2008 et 2011, la formulation différente de la prédiction de victoire oblige à changer de technique pour étudier l’effet de l’identification partisane, c’est-à-dire par régression logistique suivant le même modèle :</p>
+
+<figure>
+<figcaption>
+Tableau 3 : Probabilité de réponse «&nbsp;le parti X a le plus de chances de gagner&nbsp;» (2008) ou «&nbsp;le parti X formera le gouvernement (majoritaire, pour le PLC et le PCC)&nbsp;» (2011)</figcaption>
+
+<table>
+
+<tr>
+	<td></td>
+	<td colspan="3">
+2008</td>
+	<td colspan="3">
+2011</td>
+</tr>
+<tr>
+        <td></td>
+	<td>PLC</td>
+        <td>PCC</td>
+        <td>NPD</td>
+        <td>PLC</td>
+        <td>PCC</td>
+        <td>NPD</td>
+</tr>
+<tr>
+        <td>constante<br />β<sub>0</sub></td>
+        <td>-2,49*<br />(0,07)</td>
+        <td>-0,75*<br />(0,04)</td>
+        <td>-3,93*<br />(0,14)</td>
+        <td>-3,22*<br />(0,13)</td>
+        <td>-2,55*<br />(0,09)</td>
+        <td>-4,84*<br />(0,28)</td>
+</tr>
+<tr>
+        <td>Partisan libéral<br />β<sub>1</sub></td>
+        <td>1,21*<br />(0,11)</td>
+        <td>1,52*<br />(0,13)</td>
+        <td>-0,40<br />(0,35)</td>
+        <td>0,49*<br />(0,18)</td>
+        <td>0,53*<br />(0,13)</td>
+        <td>-0,49<br />(0,53)</td>
+</tr>
+<tr>
+        <td>Partisan conservateur
+β<sub>2</sub></td>
+        <td>-0,62*<br />(0,19)</td>
+        <td>2,91*<br />(0,13)</td>
+        <td>-0,59<br />(0,38)</td>
+        <td>-1,26*<br />(0,31)</td>
+        <td>-1,22*<br />(0,22)</td>
+        <td>-1,11<br />(0,64)</td>
+</tr>
+<tr>
+        <td>Partisan néodémocrate
+β<sub>3</sub></td>
+        <td>1,00*<br />(0,16)</td>
+        <td>1,33*<br />(0,12)</td>
+        <td>1,61*<br />(0,24)</td>
+        <td>0,24<br />(0,25)</td>
+        <td>0,32<br />(0,18)</td>
+        <td>0,82<br />(0,45)</td>
+</tr>
+<tr>
+        <td>Pseudo-R<sup>2</sup></td>
+        <td>0,06</td>
+        <td>0,16</td>
+        <td>0,05</td>
+        <td>0,03</td>
+        <td>0,04</td>
+        <td>0,03</td>
+</tr>
+<tr>
+        <td>n</td>
+        <td colspan="3">
+4495</td>
+        <td colspan="3">
+4309</td>
+</tr>
+<tr>
+    <td colspan="7">
+(erreur-type)<br />
+* p &lt; 0,05
+    </td>
+</tr>
+</table>
+
+</figure>
+
+<p>Les résultats ci-dessus montrent aussi un effet modeste mais cohérent avec l’hypothèse de l’optimisme partisan : l’identification partisane entraîne une prédiction plus avantageuse pour le parti concerné pour tous les partis.</p>
+
+<p>Cependant, cette tendance optimiste des répondants est-elle mitigée lorsque les répondants sont plus sophistiqués ? Les graphiques 11 et 12 illustrent ces deux éléments : la prédiction des chances de victoire d’un parti donné est plus optimiste pour les partisans (ligne plus épaisse) que pour les autres répondants (ligne plus fine), ce qui crédibilise l’hypothèse d’un biais optimiste. De plus, cette différence semble s’amenuiser selon la sophistication politique du répondant. </p>
+
+<figure>
+    <figcaption>Graphique 11 : Prédiction (chances de victoire) selon l’identification partisane et la sophistication politique, 2004 et 2006</figcaption>
+    <img src="../graphiques/h12e4-6.png" alt="" />
+</figure>
+
+<figure>
+    <figcaption>Graphique 12 : Prédiction (victoire de chaque parti) selon l’identification partisane et la sophistication politique, 2008 et 2011</figcaption>
+    <img src="../graphiques/h12e8-11.png" alt="" />
+</figure>
+
+<p>On peut interpréter ces graphiques assez aisément : les électeurs libéraux et conservateurs sont un peu plus optimistes que les autres quant aux chances de leur parti préféré de remporter les élections. Cet optimisme tend à être modéré par une plus grande sophistication politique, ce qui est encore plus visible pour les élections où le parti étudié a obtenu un moins bon résultat : pour les néodémocrates en général et les libéraux en 2008 et en 2011.</p>
+
+<p style="border-style:dotted; border-width:1px; border-color:grey;"> 
+Pour ces deux élections, la question posée par l’ÉÉC n’était pas strictement la même&nbsp;: alors qu’en 2004 et 2006, on demandait d’estimer les chances de victoire, les éditions de 2008 et 2011 demandaient une prédiction de l’issue. Le résultat de 2004 et 2006 ne change que marginalement si on utilise une variable dichotomique «&nbsp;victoire du parti X&nbsp;» plutôt que la prédiction des chances.
+</p>
+
+<p>Conceptuellement, l’hypothèse 1.2 pourrait être traduite par l’équation : </p>
+
+<p align="center">
+C<sub>P</sub> = β<sub>0</sub> + β<sub>1</sub>IDP + β<sub>2</sub>sophistication + β<sub>3</sub>IDP ✕ sophistication
+</p>
+
+<p>La présence de la variable dichotomique IDP, de valeur 1 si le répondant s’identifie au parti en question, sera à prouver la présence d’une différence entre les courbes de prédictions, validant ainsi l’hypothèse. Le terme d’interaction sert à tester si les courbes des estimations de chances de victoire pour les partisans d’une formation politique et le reste des électeurs sont parallèles ou non. </p>
+
+<figure>
+<figcaption>
+Tableau 4 : Chances de victoire selon l'identification partisane et la sophistication (2004 et 2006)</figcaption>
+
+<table>
+
+<tr>
+	<td></td>
+	<th colspan="3">
+2004</th>
+	<th colspan="3">
+2006</th>
+</tr>
+<tr>
+        <td> </td>
+	<th>Chances nationales du PLC</th>
+	<th>Chances nationales du PCC</th>
+	<th>Chances nationales du NPD</th>
+	<th>Chances nationales du PLC</th>
+	<th>Chances nationales du PCC</th>
+	<th>Chances nationales du NPD</th>
+</tr>
+
+<tr>
+    <td>constante<br />β<sub>0</sub></td>
+    <td>56,70*<br />(1,71)</td>
+    <td>33,53*<br />(1,59)</td>
+    <td>16,42*<br />(0,95)</td>
+    <td>52,84*<br />(0,95)</td>
+    <td>44,94*<br />(0,91)</td>
+    <td>40,31*<br />(1,48)</td>
+</tr>
+
+<tr>
+    <td>Identification pour ce parti<br />β<sub>1</sub></td>
+    <td>21,14*<br />(3,15)</td>
+    <td>23,81*<br />(3,86)</td>
+    <td>20,26*<br />(3,11)</td>
+    <td>1,32<br />(1,82)</td>
+    <td>6,82*<br />(1,81)</td>
+    <td>6,78*<br />(3,36)</td>
+</tr>
+
+<tr>
+    <td>Sophistication<br />β<sub>2</sub></td>
+    <td>-6,65*<br />(2,84)</td>
+    <td>9,30*<br />(2,64)</td>
+    <td>-18,82*<br />(1,65)</td>
+    <td>-2,02<br />(1,25)</td>
+    <td>2,62*<br />(1,18)</td>
+    <td>-15,31*<br />(2,19)</td>
+</tr>
+
+<tr>
+    <td>Identification X sophistication<br />β<sub>3</sub></td>
+    <td>-8,20<br />(5,15)</td>
+    <td>-4,65<br />(6,09)</td>
+    <td>-17,11*<br />(5,32)</td>
+    <td>1,61<br />(2,35)</td>
+    <td>-2,32<br />(2,34)</td>
+    <td>-2,70<br />(4,98)</td>
+</tr>
+
+<tr>
+    <td>R<sup>2</sup></td>
+    <td>0,04</td>
+    <td>0,05</td>
+    <td>0,09</td>
+    <td>0,01</td>
+    <td>0,02</td>
+    <td>0,10</td>
+</tr>
+
+<tr>
+    <td>n</td>
+    <td>3148</td>
+    <td>3167</td>
+    <td>2220</td>
+    <td>3189</td>
+    <td>3075</td>
+    <td>667</td>
+</tr>
+
+<tr>
+    <td colspan="7">
+(erreur-type)<br />
+* p &lt; 0,05
+    </td>
+</tr>
+</table>
+
+</figure>
+
+<p>La comparaison entre l’élection de 2004 et celle de 2006 permet aussi de souligner que celles-ci ont été disputées dans des contextes fort différents : alors que 2004 montrait la fragilisation du PLC et la montée progressive des conservateurs nouvellement unifiés, ces deux partis principaux étaient au nez à nez dans une élection de 2006 qui a marqué la première des trois victoires conservatrices consécutives.</p>
+
+<p>De plus, Il est intéressant de noter que les prédictions des répondants qui ne s’identifient à aucun parti ne diffèrent pas substantiellement de celles des répondants qui s’identifient à un parti, quel qu’il soit. Cet effet est probablement masqué par le fait que les répondants partisans présentent une sophistication politique légèrement plus élevée.</p>
+
+<figure>
+<figcaption>
+Tableau 5 : Probabilité de prédire une victoire d'un parti (%) selon l'identification partisane et la sophistication (2008 et 2011))</figcaption>
+
+<table>
+
+<tr>
+	<td></td>
+	<th colspan="3">
+2008</th>
+	<th colspan="3">
+2011</th>
+</tr>
+
+<tr>
+    <td></td>
+    <th>PLC</th>
+    <th>PCC</th>
+    <th>NPD</th>
+    <th>PLC</th>
+    <th>PCC</th>
+    <th>NPD</th>
+</tr>
+
+<tr>
+    <td>constante<br />β<sub>0</sub></td>
+    <td>23,04*<br />(1,39)</td>
+    <td>27,40*<br />(1,67)</td>
+    <td>4,69*<br />(0,65)</td>
+    <td>14,28*<br />(1,12)</td>
+    <td>37,45*<br />(1,59)</td>
+    <td>0,49<br />(0,28)</td>
+</tr>
+
+<tr>
+    <td>Identification pour ce parti<br />β<sub>1</sub></td>
+    <td>25,70*<br />(3,09)</td>
+    <td>41,10*<br />(3,94)</td>
+    <td>15,50*<br />(2,24)</td>
+    <td>19,65*<br />(2,50)</td>
+    <td>40,29*<br />(3,19)</td>
+    <td>3,32*<br />(0,85)</td>
+</tr>
+
+<tr>
+    <td>Sophistication<br />β<sub>2</sub></td>
+    <td>-22,32*<br />(2,43)</td>
+    <td>70,49*<br />(2,88)</td>
+    <td>-4,57*<br />(1,10)</td>
+    <td>-9,90*<br />(1,78)</td>
+    <td>49,33*<br />(2,50)</td>
+    <td>0,10<br />(0,44)</td>
+</tr>
+
+<tr>
+    <td>Identification X sophistication<br />β<sub>3</sub></td>
+    <td>-25,94*<br />(5,06)</td>
+    <td>-32,04*<br />(6,57)</td>
+    <td>-17,05*<br />(3,85)</td>
+    <td>-16,27*<br />(3,74)</td>
+    <td>-33,73*<br />(4,96)</td>
+    <td>-3,69*<br />(1,32)</td>
+</tr>
+
+<tr>
+    <td>R2</td>
+    <td>0,07</td>
+    <td>0,21</td>
+    <td>0,03</td>
+    <td>0,04</td>
+    <td>0,13</td>
+    <td>0,00</td>
+</tr>
+
+<tr>
+    <td>n</td>
+    <td>3257</td>
+    <td>3257</td>
+    <td>3257</td>
+    <td>4308</td>
+    <td>4308</td>
+    <td>4308</td>
+</tr>
+
+<tr>
+    <td colspan="7">
+(erreur-type)<br />
+* p &lt; 0,05
+    </td>
+</tr>
+</table>
+
+</figure>
+
+<p>Les observations de l’élection de 2008 et de 2011 appuient elles aussi le lien entre l’identification partisane, la sophistication des électeurs et leur prédiction : le fait de revendiquer une couleur politique affecte à la hausse la propension à prédire une victoire de ce parti alors qu’une meilleure connaissance de la politique fédérale favorise plutôt une prédiction cohérente avec le résultat des élections (victoires conservatrices). </p>
+
+<p align="center">
+* * *
+</p>
+
+<p>Prochain chapitre : <a href="/information-externe/">L’influence de l’information externe</a></p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Prédictions citoyennes</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>par <a href="http://fmgagnon.com">François Gagnon</a></li>
+          <li><a href="mailto:francois@fmgagnon.com">francois@fmgagnon.com</a></li>
+                    <li>
+            <a href="https://twitter.com/fmgagnon"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">fmgagnon</span></a>
+
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+       
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Un essai sur les facteurs qui influencent les prédictions que font les citoyens du résultat d'une élection, ce qui peut influencer leur vote tactique.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

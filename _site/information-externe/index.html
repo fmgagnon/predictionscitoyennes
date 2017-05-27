@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Influence de l'information externe</title>
+  <meta name="description" content="Un essai sur les facteurs qui influencent les prédictions que font les citoyens du résultat d'une élection, ce qui peut influencer leur vote tactique.
+">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/tableaux.css">
+  
+  <link rel="canonical" href="http://predictionscitoyennes.fmgagnon.com/information-externe/">
+  <link rel="alternate" type="application/rss+xml" title="Prédictions citoyennes" href="http://predictionscitoyennes.fmgagnon.com/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Prédictions citoyennes</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Influence de l'information externe</h1>
+  </header>
+
+  <div class="post-content">
+    <p>Le deuxième groupe d’hypothèses s’intéresse à ce qu’on peut appeler, selon la littérature, un facteur cognitif externe et l’impact sur celui-ci d’un second facteur affectif : L’information externe influence la prédiction de victoire (locale et nationale).</p>
+
+<h3 id="information-de-sondages">Information de sondages</h3>
+
+<p>Ainsi, pour 2004 et 2006, on peut observer que les prédictions formulées par les répondants de l’ÉÉC amplifient généralement la tendance observée par les sondages publiés le matin de l’entrevue : </p>
+
+<figure>
+    <figcaption>Graphique 13 : Intentions de votes et prédictions au cours de la campagne, 2004 et 2006</figcaption>
+    <img src="../graphiques/h21e4-6.png" alt="" />
+</figure>
+
+<p>On peut tirer une conclusion similaire pour les élections de 2008 et 2011, sauf dans le cas du PCC en 2011 et du NPD en 2008 :</p>
+
+<figure>
+    <figcaption>Graphique 14 : Graphique 9 : Intentions de votes et prédictions au cours de la campagne, 2008 et 2011</figcaption>
+    <img src="../graphiques/h21e8-11.png" alt="" />
+</figure>
+
+<p>La campagne électorale de 2011 est particulièrement intéressante car on peut y observer que les prédictions des répondants étaient de plus en plus orientées vers une victoire du PCC même si les intentions de vote rapportées dans les plus récents sondages ne laissaient pas entrevoir une croissance du PCC; on peut supposer que ces répondants se basaient plutôt sur la décroissance des intentions de vote du PLC pour formuler une prédiction de victoire conservatrice.</p>
+
+<p>Pour tester cette hypothèse, on continue à utiliser les réponses standardisées pour tester si les chances de victoires C pour un parti p selon un répondant de l’ÉÉC sont influencées par l’information externe :</p>
+
+<p align="center">
+C<sub>P</sub> = β<sub>0</sub> + β<sub>1</sub>sondage<sub>J</sub>
+</p>
+
+<p>La variable sondage<sub>J</sub> représente l’information de sondages qui est le plus directement disponible pour l’électeur. Ainsi, on mettra à profit le fait que les observations sont groupées par jour afin de s’intéresser à l’effet du dernier sondage publié, en prenant pour acquis que la couverture nationale de la campagne électorale, pour un jour donné, est principalement teintée par les résultats de sondages publiés le matin-même dans la presse.</p>
+
+<p>Ce modèle doit être testé en utilisant un modèle de régression à effets mixtes incluant une variation pour chaque jour d’observation.</p>
+
+<figure>
+<figcaption>Tableau 6&nbsp;: Prédiction des chances de victoire selon les intentions de vote du dernier sondage (2004 et 2006)</figcaption>
+
+<table>
+<tr>
+    <td></td>
+    <td colspan="3">2004</td>
+    <td colspan="3">2006</td>
+</tr>
+
+
+    <td></td>
+    <td>PLC</td>
+    <td>PCC</td>
+    <td>NPD</td>
+    <td>PLC</td>
+    <td>PCC</td>
+    <td>NPD</td>
+
+
+<tr>
+    <td>constante<br />β<sub>0</sub></td>
+    <td>-34,39*<br />(10,63)</td>
+    <td>-8,88<br />(23,13)</td>
+    <td>5,88<br />(5,45)</td>
+    <td>11,39*<br />(4,17)</td>
+    <td>1,17<br />(4,81)</td>
+    <td>44,00*<br />(6,29)</td>
+</tr>
+
+<tr>
+    <td>Intentions de votes<br />β<sub>1</sub></td>
+    <td>2,71*<br />(0,31)</td>
+    <td>1,66*<br />(0,73)</td>
+    <td>0,12<br />(0,29)</td>
+    <td>1,23*<br />(0,12)</td>
+    <td>1,41*<br />(0,15)</td>
+    <td>-0,74<br />(0,38)</td>
+</tr>
+
+<tr>
+    <td>Variance par jour</td>
+    <td>0,10</td>
+    <td>0,88</td>
+    <td>0,01</td>
+    <td>0,10</td>
+    <td>0,12</td>
+    <td>0,00</td>
+</tr>
+
+<tr>
+    <td>n</td>
+    <td>2495</td>
+    <td>2510</td>
+    <td>1718</td>
+    <td>3027</td>
+    <td>2914</td>
+    <td>632</td>
+</tr>
+
+<tr>
+    <td>groupes</td>
+    <td>28</td>
+    <td>28</td>
+    <td>28</td>
+    <td>47</td>
+    <td>47</td>
+    <td>47</td>
+</tr>
+
+<tr>
+    <td colspan="7">(erreur-type)<br /> * p &lt; 0,05 </td>
+</tr>
+</table>
+
+</figure>
+
+<p>Ces résultats suggèrent que la prédiction que formulent les répondants quant aux chances de victoire d’un parti est en effet influencée par les sondages, mais que cette influence est plus nette dans le cas du PLC.</p>
+
+<p>De façon similaire, pour les élections de 2008 et de 2011, un modèle de régression logistique à effets mixtes est utilisé ici afin de mettre en relation la variable dichotomique d’une prédiction de victoire pour un parti et celle selon laquelle ce parti mène le plus récent sondage :</p>
+
+<figure>
+<figcaption>
+Tableau 7&nbsp;: Prédiction de victoire si le parti mène le plus récent sondage (2008 et 2011)</figcaption>
+
+
+<table>
+
+<tr>
+    <td></td>
+    <td colspan="3">2008</td>
+    <td colspan="3">2011</td>
+</tr>
+
+<tr>
+    <td></td>
+    <td>PLC</td>
+    <td>PCC</td>
+    <td>NPD</td>
+    <td>PLC</td>
+    <td>PCC</td>
+    <td>NPD</td>
+</tr>
+
+<tr>
+    <td>constante<br />β<sub>0</sub></td>
+    <td>-2,16*<br />(0,90)</td>
+    <td>0,70<br />(1,02)</td>
+    <td>-3,49*<br />(1,49)</td>
+    <td>-3,50*<br />(0,41)</td>
+    <td>1,69*<br />(0,62)</td>
+    <td>-7,79*<br />(0,86)</td>
+</tr>
+
+<tr>
+    <td>Meneur du dernier sondage<br />β<sub>1</sub></td>
+    <td>1,34<br />(3,47)</td>
+    <td>0,28<br />(2,90)</td>
+    <td>0,06<br />(7,67)</td>
+    <td>5,37*<br />(1,55)</td>
+    <td>-2,10<br />(1,65)</td>
+    <td>11,50*<br />(3,11)</td>
+</tr>
+
+<tr>
+    <td>Variance par jour</td>
+    <td>0,05</td>
+    <td>0,06</td>
+    <td>0,00</td>
+    <td>0,02</td>
+    <td>0,02</td>
+    <td>0,01</td>
+</tr>
+
+<tr>
+    <td>n</td>
+    <td colspan="3">3257</td>
+    <td colspan="3">4187</td>
+</tr>
+
+<tr>
+    <td>groupes</td>
+    <td colspan="3">18</td>
+    <td colspan="3">34</td>
+</tr>
+
+<tr>
+    <td colspan="7">
+(erreur-type)<br />
+* p &lt; 0,05
+    </td>
+</tr>
+</table>
+
+</figure>
+
+<p>Un second volet de l’hypothèse veut que l’intérêt pour la politique du répondant exacerbe cet effet. Selon cette hypothèse, l’effet du sondage publié le jour-même serait plus important pour les répondants qui s’intéressent beaucoup à la politique et à l’élection en cours. Une première façon de la tester serait de créer une nouvelle variable qui représente, en valeur absolue, la différence entre la prédiction de chances d’un parti donné et les intentions de vote de ce parti dans le plus récent sondage, on peut étudier comment cette différence évolue selon l’intérêt du répondant :</p>
+
+<figure>
+    <figcaption>Graphique 15 : Différence entre la prédiction des chances de victoire et les intentions de votes du dernier sondage publié selon l’intérêt déclaré, 2004 et 2006</figcaption>
+    <img src="../graphiques/h22e4-6.png" alt="" />
+</figure>
+
+<p>À première vue, on peut croire que la relation est contradictoire selon les partis étudiés : alors que la relation est très claire pour le PLC et le NPD, il semble qu’un plus grand intérêt entraîne une plus grande différence entre la prédiction et le résultat de sondages en ce qui concerne le parti conservateur. Une cause possible pour cette divergence est la différence de nature entre la variable expliquée « prédiction des chances » et la variable explicative « intentions de vote » : alors que l’ÉÉC demande aux répondants d’estimer une probabilité, les intentions de votes sont exprimées en pourcentage du total. Cela s’observe particulièrement lorsqu’une course est tranchée : par exemple, si un répondant se fie sur un sondage donnant 50% des intentions de vote à un parti et juge que ce parti a 100 % des chances de remporter une élection fédérale au Canada, la valeur de la variable « différence » utilisée ci-haut serait très élevée même si le répondant est fortement influencé par le sondage. Pour cette raison, l’utilisation de variables dichotomiques est préférable.  </p>
+
+<p>On crée donc plutôt, en premier lieu, une variable dichotomique correspondant à une prédiction de victoire (égale à 1 lorsque les répondants accordent une plus grande chance de victoire à un parti donné) et une variable dichotomique égale à 1 si ce parti est en tête du sondage le plus récent.</p>
+
+<figure>
+    <figcaption>Graphique 16 : Prédiction de victoire du PLC et du PCC selon l’intérêt, quand les sondages prédisent une victoire de ce parti ou d’un autre</figcaption>    <img src="../graphiques/h22e4-6-8-11.png" alt="" />
+</figure>
+
+<p>Le graphique 16 nous montre la limite de la variable dichotomique pour les élections de 2008 et de 2011, où les sondages ont toujours donné le PCC vainqueur. Cependant, pour 2004, le graphique suggère un effet marqué des sondages et un léger effet de la variable « intérêt ».</p>
+
+<p>En termes mathématiques, cette hypothèse pourrait être traduite par l’équation :</p>
+
+<p align="center">
+P<sub>P</sub> = β<sub>0</sub> + β<sub>1</sub>sondage<sub>J</sub> + β<sub>2</sub>intérêt + β<sub>3</sub>sondage<sub>J</sub> ✕ intérêt
+</p>
+
+<p>où P<sub>P</sub> représente la prédiction quant à un parti (victoire ou chances) et sondageJ représente l’information donnée par un sondage (parti meneur ou intentions de vote). Le premier test à effectuer utilise les deux variables dichotomiques précédemment présentées (prédiction de victoire et parti meneur dans le sondage le plus récent) dans une régression logistique à effets mixtes. Deux modèles sont présentés afin d’utiliser ou non le terme d’interaction sondage<sub>J</sub> ✕ intérêt (comme la différence de pentes ne semble pas très grande) : </p>
+
+<figure>
+	<figcaption>Tableau 8&nbsp;: Prédiction de victoire (dichotomique) selon le vainqueur du dernier sondage (dichotomique) (2004)</figcaption>
+
+<table>
+
+<tr>
+    <td></td>
+    <td colspan="2">PLC</td>
+    <td colspan="2">PCC</td>
+</tr>
+
+<tr>
+    <td>constante<br />β<sub>0</sub></td>
+    <td>-1,03*<br />(0,15)</td>
+    <td>-1,11*<br />(0,12)</td>
+    <td>-1,80*<br />(0,12)</td>
+    <td>-1,97*<br />(0,12)</td>
+</tr>
+
+<tr>
+    <td>meneur sondage<br />β<sub>1</sub></td>
+    <td>0,53*<br />(0,20)</td>
+    <td>0,67*<br />(0,14)</td>
+    <td>0,04<br />(0,15)</td>
+    <td>0,41*<br />(0,12)</td>
+</tr>
+
+<tr>
+    <td>intérêt<br />β<sub>2</sub></td>
+    <td>-0,04*<br />(0,02)</td>
+    <td>-0,03*<br />(0,01)</td>
+    <td>0,09*<br />(0,02)</td>
+    <td>0,05*<br />(0,01)</td>
+</tr>
+
+<tr>
+    <td>sondage X intérêt<br />β<sub>3</sub></td>
+    <td>0,02*<br />(0,02)</td>
+    <td></td>
+    <td>-0,07*<br />(0,02)</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>Variation par jour</td>
+    <td>0,09</td>
+    <td>0,09</td>
+    <td>0,02</td>
+    <td>0,04</td>
+</tr>
+
+<tr>
+    <td>n</td>
+    <td colspan="4">3398</td>
+</tr>
+
+<tr>
+    <td>groupes</td>
+    <td colspan="4">28</td>
+</tr>
+
+<tr>
+    <td colspan="7">
+(erreur-type)<br />
+* p &lt; 0,05
+    </td>
+</tr>
+</table>
+
+</figure>
+
+<p>Une fois que le lien a été observé, on peut tenter de raffiner les chances de victoire d’un parti donné (exprimées en pourcentage), toujours selon la variable dichotomique « meneur sondage » et l’intérêt, avec ou sans terme d’interaction :</p>
+
+<figure>
+<figcaption>
+Tableau 9&nbsp;: Prédiction des chances de victoire selon le vainqueur du dernier sondage (dichotomique) (2004)</figcaption>
+
+<table>
+
+<tr>
+	<td></td>
+	<td colspan="2">PLC</td>
+	<td colspan="2">PCC</td>
+</tr>
+
+<tr>
+	<td>constante <br />β<sub>0</sub></td>
+	<td>60,52* <br />(2,98)</td>
+	<td>57,36* <br />(2,50)</td>
+	<td>32,73* <br />(3,07)</td>
+	<td>31,57* <br />(2,77)</td>
+</tr>
+
+<tr>
+	<td>meneur sondage <br />β<sub>1</sub></td>
+	<td>8,41* <br />(4,13)</td>
+	<td>14,58* <br />(2,65)</td>
+	<td>8,40 <br />(4,85)</td>
+	<td>11,28* <br />(3,60)</td>
+</tr>
+
+<tr>
+	<td>intérêt <br />β<sub>2</sub></td>
+	<td>-1,81* <br />(0,37)</td>
+	<td>-1,30* <br />(0,26)</td>
+	<td>1,07* <br />(0,34)</td>
+	<td>1,26* <br />(0,26)</td>
+</tr>
+
+<tr>
+	<td>sondage X intérêt <br />β<sub>3</sub></td>
+	<td>1,01 <br />(0,52)</td>
+	<td></td>
+	<td>0,47 <br />(0,53)</td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>Variation par jour</td>
+	<td colspan="2">0,32</td>
+	<td colspan="2">0,71</td>
+</tr>
+
+<tr>
+	<td>n</td>
+	<td colspan="2">2483</td>
+	<td colspan="2">2497</td>
+</tr>
+
+<tr>
+	<td>groupes</td>
+	<td colspan="2">28</td>
+	<td colspan="2">28</td>
+</tr>	
+	
+<tr>
+    <td colspan="7">
+(erreur-type)<br />
+* p &lt; 0,05
+    </td>
+</tr>
+</table>
+
+</figure>
+
+<p>On obtient un effet statistiquement significatif pour le modèle sans terme d’interaction, ce qui suggère que les pentes ne divergent pas suffisamment pour justifier la présence de cet élément dans le modèle. L’abandon du terme d’interaction simplifie grandement la dernière variation sur le même modèle, qui met en relation les chances (exprimées en pourcentage) et les intentions de vote (elles aussi exprimées en pourcentage) : </p>
+
+<figure>
+<figcaption>
+Tableau 10&nbsp;: Prédiction des chances de victoire selon les intentions de vote du dernier sondage (2004)</figcaption>
+
+<table>
+
+<tr>
+    <td></td>
+    <td>PLC</td>
+    <td>PCC</td>
+</tr>
+
+<tr>
+    <td>constante<br />β<sub>0</sub></td>
+    <td>-27,50*<br />(10,39)</td>
+    <td>-9,67<br />(23,01)</td>
+</tr>
+
+<tr>
+    <td>sondage<br />β<sub>1</sub></td>
+    <td>2,74*<br />(0,30)</td>
+    <td>1,44*<br />(0,72)</td>
+</tr>
+
+<tr>
+    <td>Intérêt<br />β<sub>2</sub></td>
+    <td>-1,34*<br />(0,26)</td>
+    <td>1,26*<br />(0,26)</td>
+</tr>
+
+<tr>
+    <td>Variance par jour</td>
+    <td>0,09</td>
+    <td>0,86</td>
+</tr>
+
+<tr>
+    <td>n</td>
+    <td>2483</td>
+    <td>2497</td>
+</tr>
+
+<tr>
+    <td>groupes</td>
+    <td>28</td>
+    <td>28</td>
+</tr>
+
+<tr>
+    <td colspan="7">
+(erreur-type)<br />
+* p &lt; 0,05
+    </td>
+</tr>
+</table>
+
+</figure>
+
+<p>L’analyse exploratoire présentée dans le graphique 15 décourage l’utilisation de la même méthode pour tester l’hypothèse sur les élections de 2006, 2008 et 2011 : dans le premier cas, il est difficile de distinguer les prédictions formulées à la suite de la parution d’un sondage favorable pour l’un ou l’autre des principaux partis. Dans les deux autres cas, la valeur de la variable dichotomique « meneur du sondage » serait toujours négative pour le PLC et toujours positive pour le PCC.</p>
+
+<p>Pour l’élection de 2006, cet écueil peut être contourné en utilisant directement une régression à effets mixtes :</p>
+
+<figure>
+<figcaption>
+Tableau 11&nbsp;: Prédiction des chances de victoire selon les intentions de vote du dernier sondage (2006)</figcaption>
+
+<table>
+
+
+<tr>
+    <td></td>
+    <td>PLC</td>
+    <td>PCC</td>
+</tr>
+
+<tr>
+    <td>constante<br />β<sub>0</sub></td>
+    <td>14,32*<br />(3,53)</td>
+    <td>3,79<br />(5,06)</td>
+</tr>
+
+<tr>
+    <td>sondage<br />β<sub>1</sub></td>
+    <td>1,22*<br />(0,11)</td>
+    <td>1,26*<br />(0,15)</td>
+</tr>
+
+<tr>
+    <td>Intérêt<br />β<sub>2</sub></td>
+    <td>-0,38*<br />(0,09)</td>
+    <td>0,33*<br />(0,09)</td>
+</tr>
+
+<tr>
+    <td>Variance par jour</td>
+    <td>0,07</td>
+    <td>0,14</td>
+</tr>
+
+<tr>
+    <td>n</td>
+    <td>3015</td>
+    <td>2901</td>
+</tr>
+
+<tr>
+    <td>groupes</td>
+    <td>47</td>
+    <td>47</td>
+</tr>
+
+<tr>
+    <td colspan="7">
+(erreur-type)<br />
+* p &lt; 0,05
+    </td>
+</tr>
+</table>
+
+</figure>
+
+<p>Pour les élections de 2008 et de 2011, comme pour l’hypothèse 2.1 plus tôt, il est difficile de voir un lien entre la prédiction formulée par les répondants et les résultats de sondage : le fait que la question de l’ÉÉC, pour cette édition, ne demande pas de quantifier la prédiction des répondants ne permet pas d’évaluer cette prédiction quant à l’issue d’une élection où tous les sondages donnaient le PCC gagnant (avec une plus ou moins forte avance).</p>
+
+<h3 id="information-de-la-dernire-lection">Information de la dernière élection</h3>
+
+<p>Les données disponibles pour l’examen de l’élection de 2011 offrent une autre piste d’influence de l’information externe : le résultat de la dernière élection.</p>
+
+<figure>
+    <figcaption>Graphique 17 : Prédiction de victoire locale d’un parti selon l’intérêt et si ce parti a gagné la dernière élection (2008) ou non dans cette circonscription</figcaption>
+    <img src="../graphiques/h22e11.png" alt="" />
+</figure>
+
+<p>Le graphique 17 suggère, du moins pour le PLC, le NPD et le BQ, que la prédiction de victoire est en effet fonction de l’intérêt du répondant pour la campagne électorale, mais que le gagnant de l’élection précédente exerce une forte influence. Cette hypothèse pourrait être traduite par l’équation :</p>
+
+<p align="center">
+P<sub>P</sub> = β<sub>0</sub> + β<sub>1</sub>victoire2008<sub>C</sub> + β<sub>2</sub>victoire2008<sub>C</sub> ✕ intérêt
+</p>
+
+<p>où le terme d’interaction est la partie la plus importante, car l’intérêt ne semble jouer un rôle que dans les circonscription où le parti a remporté la dernière élection.</p>
+
+<figure>
+<figcaption>
+Tableau 12&nbsp;: Prédiction de victoire locale selon le gagnant de la dernière élection et l’intérêt (2011)</figcaption>
+
+<table>
+
+<tr>
+	<td></td>
+	<td>PLC</td>
+	<td>PCC</td>
+	<td>NPD</td>
+	<td>BQ</td>
+</tr>
+
+<tr>
+	<td>constante <br />β<sub>0</sub></td>
+	<td>-2,45* <br />(0,09)</td>
+	<td>-2,17* <br />(0,09)</td>
+	<td>-3,60* <br />(0,14)</td>
+	<td>-4,36* <br />(0,20)</td>
+</tr>
+
+<tr>
+	<td>gain en 2008 <br />β<sub>1</sub></td>
+	<td>2,22* <br />(0,22)</td>
+	<td>2,10* <br />(0,17)</td>
+	<td>3,27* <br />(0,38)</td>
+	<td>4,21* <br />(0,30)</td>
+</tr>
+
+<tr>
+	<td>gain en 2008 X intérêt <br />β<sub>2</sub></td>
+	<td>0,07* <br />(0,02)</td>
+	<td>0,13* <br />(0,02)</td>
+	<td>0,11* <br />(0,04)</td>
+	<td>0,09* <br />(0,03)</td>
+</tr>
+
+<tr>
+	<td>Variance par circonscription</td>
+	<td>0,50</td>
+	<td>0,47</td>
+	<td>0,87</td>
+	<td>1,08</td>
+</tr>
+
+<tr>
+	<td>n</td>
+	<td colspan="4">4118</td>
+</tr>
+
+<tr>
+	<td>groupes</td>
+	<td colspan="4">305</td>
+</tr>
+</table>
+
+</figure>
+
+<p>Le tableau 12 présente justement des résultats statistiquement significatifs qui suggèrent un réel effet, en accord avec la représentation graphique montrée ci-haut.  De tels résultats, isolés de tout contexte qualitatif quant à la perception des électeurs, pourraient suggérer un grand effet de la présence d’un candidat sortant, mais n’éclaire pas les prédictions uniformément pessimistes pour les autres partis.</p>
+
+<p align="center">
+* * *
+</p>
+
+<p>Prochain chapitre : <a href="/principaux-constats/">Principaux constats</a></p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Prédictions citoyennes</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>par <a href="http://fmgagnon.com">François Gagnon</a></li>
+          <li><a href="mailto:francois@fmgagnon.com">francois@fmgagnon.com</a></li>
+                    <li>
+            <a href="https://twitter.com/fmgagnon"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">fmgagnon</span></a>
+
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+       
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Un essai sur les facteurs qui influencent les prédictions que font les citoyens du résultat d'une élection, ce qui peut influencer leur vote tactique.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prédictions citoyennes</title>
+    <description>Un essai sur les facteurs qui influencent les prédictions que font les citoyens du résultat d&#39;une élection, ce qui peut influencer leur vote tactique.
+</description>
+    <link>http://predictionscitoyennes.fmgagnon.com/</link>
+    <atom:link href="http://predictionscitoyennes.fmgagnon.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 02 Nov 2016 20:17:52 -0400</pubDate>
+    <lastBuildDate>Wed, 02 Nov 2016 20:17:52 -0400</lastBuildDate>
+    <generator>Jekyll v3.0.0</generator>
+    
+  </channel>
+</rss>

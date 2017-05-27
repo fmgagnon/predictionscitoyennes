@@ -1,0 +1,29 @@
+table, th {
+   font-size:90%;
+text-align:left;
+}
+
+table {
+	margin:auto;
+	border:1px solid grey;
+}
+
+th {
+	font-style:bold;}
+
+td, th {
+	padding:10px;}
+
+figcaption {
+text-align:center;
+font-size:120%;
+font-style:bold;
+}
+
+figure {
+margin: auto;
+text-align: center;
+}
+
+img {
+margin: auto;}
